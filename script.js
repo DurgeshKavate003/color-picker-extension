@@ -27,8 +27,11 @@ const showColors = () => {
 }
 showColors();
 
-const activateEyeDropper = async () => {
-    try {
+const activateEyeDropper = () => {
+    document.body.style.display = "none";
+
+    setTimeout(async () => {
+        try {
         const eyeDropper = new EyeDropper();
         const { sRGBHex } = await eyeDropper.open();
         navigator.clipboard.writeText(sRGBHex);
@@ -42,6 +45,9 @@ const activateEyeDropper = async () => {
     } catch (error) {
         console.log(error);
     }
+    document.body.style.display = "block";
+    }, 10);
+
 }
 
 const clearAllColors = () => {
