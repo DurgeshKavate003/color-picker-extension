@@ -45,6 +45,10 @@ body {
     margin: 10px 15px;
 }
 
+.picked-colors.hide {
+    display: none;
+}
+
 .picked-colors header {
     justify-content: space-between;
 }
@@ -72,7 +76,7 @@ body {
     width: 22px;
     margin-right: 8px;
     border-radius: 5px;
-    background: #5372f0;
+    border: 1px solid black;
 }
 
 .all-colors .color .value {
